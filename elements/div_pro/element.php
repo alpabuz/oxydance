@@ -92,8 +92,8 @@ class DivPro extends \Breakdance\Elements\Element
       "layout",
        ['type' => 'popout']
      ), c(
-        "container",
-        "Container",
+        "size",
+        "Size",
         [c(
         "width",
         "Width",
@@ -126,12 +126,7 @@ class DivPro extends \Breakdance\Elements\Element
         true,
         false,
         [],
-      ), getPresetSection(
-      "EssentialElements\\borders",
-      "Borders",
-      "borders",
-       ['type' => 'popout']
-     )],
+      )],
         ['type' => 'section'],
         false,
         false,
@@ -205,7 +200,12 @@ class DivPro extends \Breakdance\Elements\Element
         false,
         false,
         [],
-      )];
+      ), getPresetSection(
+      "EssentialElements\\borders",
+      "Borders",
+      "borders",
+       ['type' => 'popout']
+     )];
     }
 
     static function contentControls()

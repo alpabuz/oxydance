@@ -1,18 +1,13 @@
 %%SELECTOR%% {
-  min-width: {{ design.container.min_width.style }};
-  width: {{ design.container.width.style }};
-  min-height: {{ design.container.min_height.style }};
-  height: {{ design.container.height.style }};
-  {{ macros.backgroundColor(design.container.background) }}
+  min-width: {{ design.size.min_width.style }};
+  width: {{ design.size.width.style }};
+  min-height: {{ design.size.min_height.style }};
+  height: {{ design.size.height.style }};
+  {{ macros.backgroundColor(design.size.background) }}
   {{ macros.spacing_complex(design.spacing.padding, 'padding') }}
   {{ macros.spacing_complex(design.spacing.margin, 'margin') }}
-  {{ macros.borders(design.container.borders) }}
+  {{ macros.borders(design.borders) }}
   {{ macros.layout(design.layout) }}
-
-  {# backwards compat - we removed the height field and replaced it with min height during the beta, but we dont want to break designs that already set height #}
-  height: {{ design.container.height.style }};
-  {# if we ever want to delete this entirely we can add a builder only warning in the html for this element that will only appear if the user has height set #}
-
 }
 
 {{ macros.fancyBackgroundCss('%%SELECTOR%%', design.background, breakpoint, false, true) }}
