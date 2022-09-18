@@ -127,21 +127,35 @@ class DivPro extends \Breakdance\Elements\Element
         false,
         [],
       ), getPresetSection(
-      "EssentialElements\\spacing_padding_all",
-      "Padding",
-      "padding",
-       ['type' => 'popout']
-     ), getPresetSection(
       "EssentialElements\\borders",
       "Borders",
       "borders",
        ['type' => 'popout']
-     ), getPresetSection(
-      "EssentialElements\\spacing_margin_all",
-      "Margin (All)",
-      "spacing_margin_all",
-       ['type' => 'popout']
      )],
+        ['type' => 'section'],
+        false,
+        false,
+        [],
+      ), c(
+        "spacing",
+        "Spacing",
+        [c(
+        "padding",
+        "Padding",
+        [],
+        ['type' => 'spacing_complex', 'layout' => 'inline'],
+        true,
+        false,
+        [],
+      ), c(
+        "margin",
+        "Margin",
+        [],
+        ['type' => 'spacing_complex', 'layout' => 'inline'],
+        true,
+        false,
+        [],
+      )],
         ['type' => 'section'],
         false,
         false,

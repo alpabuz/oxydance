@@ -4,7 +4,8 @@
   min-height: {{ design.container.min_height.style }};
   height: {{ design.container.height.style }};
   {{ macros.backgroundColor(design.container.background) }}
-  {{ macros.spacing_padding_all(design.container.padding) }}
+  {{ macros.spacing_complex(design.spacing.padding, 'padding') }}
+  {{ macros.spacing_complex(design.spacing.margin, 'margin') }}
   {{ macros.borders(design.container.borders) }}
   {{ macros.layout(design.layout) }}
 
