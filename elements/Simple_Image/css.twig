@@ -1,0 +1,11 @@
+%%SELECTOR%% {
+  width: {{ content.content.width.style }};
+  {{ macros.spacing_margin_y(design.spacing) }}
+  {{ macros.borders(design.borders) }}
+}
+
+{% if content.content.aspect_ratio %}
+%%SELECTOR%% .breakdance-image-object {
+  aspect-ratio: {{ content.content.aspect_ratio }}
+}
+{% endif %}

@@ -1,0 +1,12 @@
+.breakdance .oxd-simple-image {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.breakdance-image-object {
+  display: block;
+  object-fit: cover;
+}
