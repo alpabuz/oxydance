@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Oxydance
- * Plugin URI: https://breakdance.com/
+ * Plugin URI: https://github.com/alpabuz/oxydance
  * Description: ALPHA - NOT TO BE USED IN PRODUCTION
  * Author: @alpabuz 
  * Author URI: https://t.me/alpabuz
