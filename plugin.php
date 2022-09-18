@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Oxydance
  * Plugin URI: https://github.com/alpabuz/oxydance
- * Description: ALPHA - NOT TO BE USED IN PRODUCTION
+ * Description: A set of elements for Breakdance, which will make the work of Oxygen users more pleasant. Not recommended for Elementor fans.
  * Author: @alpabuz 
  * Author URI: https://t.me/alpabuz
  * License: GPLv2
