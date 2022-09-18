@@ -103,6 +103,22 @@ class DivPro extends \Breakdance\Elements\Element
         false,
         [],
       ), c(
+        "height",
+        "Height",
+        [],
+        ['type' => 'unit', 'layout' => 'inline'],
+        true,
+        false,
+        [],
+      ), c(
+        "min_width",
+        "Min Width",
+        [],
+        ['type' => 'unit', 'layout' => 'inline'],
+        true,
+        false,
+        [],
+      ), c(
         "min_height",
         "Min Height",
         [],
@@ -119,6 +135,11 @@ class DivPro extends \Breakdance\Elements\Element
       "EssentialElements\\borders",
       "Borders",
       "borders",
+       ['type' => 'popout']
+     ), getPresetSection(
+      "EssentialElements\\spacing_margin_all",
+      "Margin (All)",
+      "spacing_margin_all",
        ['type' => 'popout']
      )],
         ['type' => 'section'],
