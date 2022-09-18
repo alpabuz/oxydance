@@ -91,11 +91,6 @@ class DivPro extends \Breakdance\Elements\Element
       "Layout",
       "layout",
        ['type' => 'popout']
-     ), getPresetSection(
-      "EssentialElements\\LessFancyBackground",
-      "Background",
-      "background",
-       ['type' => 'popout']
      ), c(
         "container",
         "Container",
@@ -130,7 +125,12 @@ class DivPro extends \Breakdance\Elements\Element
         false,
         false,
         [],
-      ), c(
+      ), getPresetSection(
+      "EssentialElements\\LessFancyBackground",
+      "Background",
+      "background",
+       ['type' => 'popout']
+     ), c(
         "text_colors",
         "Text Colors",
         [c(
@@ -170,12 +170,7 @@ class DivPro extends \Breakdance\Elements\Element
         false,
         false,
         [],
-      ), getPresetSection(
-      "EssentialElements\\spacing_margin_y",
-      "Spacing",
-      "spacing",
-       ['type' => 'popout']
-     )];
+      )];
     }
 
     static function contentControls()
