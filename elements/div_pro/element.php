@@ -45,7 +45,7 @@ class DivPro extends \Breakdance\Elements\Element
 
     static function category()
     {
-        return 'basic';
+        return 'other';
     }
 
     static function badge()
@@ -70,7 +70,7 @@ class DivPro extends \Breakdance\Elements\Element
 
     static function defaultProperties()
     {
-        return false;
+        return ['design' => ['layout' => ['display' => ['breakpoint_base' => 'flex']], 'container' => ['min_width' => ['breakpoint_base' => ['number' => 500, 'unit' => 'px', 'style' => '500px']], 'min_height' => ['breakpoint_base' => ['number' => 500, 'unit' => 'px', 'style' => '500px']]], 'background' => null, 'grid' => ['enable' => ['breakpoint_base' => null]], 'layout_basic_flex' => ['stack' => null, 'h_h_alignment' => ['breakpoint_base' => 'left'], 'h_v_alignment' => ['breakpoint_base' => 'top'], 'alignment' => null], 'spacing' => ['margin' => null, 'padding' => null], 'size' => ['width' => null, 'height' => null, 'min_height' => null, 'min_width' => null], 'borders' => null]];
     }
 
     static function defaultChildren()
