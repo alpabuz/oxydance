@@ -2,6 +2,9 @@
 
 A set of elements for Breakdance, which will make the work of Oxygen users more pleasant. Not recommended for Elementor fans.
 
+It is supplied "as is" and can be used in your projects now, while you should understand the possible risks, since Element Studio is still in the Alpha stage.
+You can fork it and modify it however you want.
+
 ## The set currently contains: ##
 
 ### Image Pro ###
