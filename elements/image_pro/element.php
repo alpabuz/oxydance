@@ -7,7 +7,7 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
 
 
 \Breakdance\ElementStudio\registerElementForEditing(
-    "EssentialElements\\SimpleImage",
+    "EssentialElements\\ImagePro",
     \Breakdance\Util\getdirectoryPathRelativeToPluginFolder(__DIR__)
 );
 
@@ -35,12 +35,12 @@ class SimpleImage extends \Breakdance\Elements\Element
 
     static function name()
     {
-        return 'Simple Image';
+        return 'Image Pro';
     }
 
     static function className()
     {
-        return 'oxd-simple-image';
+        return 'oxd-image-pro';
     }
 
     static function category()
