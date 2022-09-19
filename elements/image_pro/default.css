@@ -2,4 +2,5 @@
   display: block;
   object-fit: cover;
   overflow: hidden;
+  z-index: 0;
 }

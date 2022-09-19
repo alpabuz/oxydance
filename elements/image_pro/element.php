@@ -11,7 +11,7 @@ use function Breakdance\Elements\PresetSections\getPresetSection;
     \Breakdance\Util\getdirectoryPathRelativeToPluginFolder(__DIR__)
 );
 
-class SimpleImage extends \Breakdance\Elements\Element
+class ImagePro extends \Breakdance\Elements\Element
 {
     static function uiIcon()
     {
