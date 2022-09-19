@@ -14,6 +14,8 @@ You can fork it and modify it however you want.
 - Added aspect ratio setting
 - Width, Height and Aspect Ratio settings shown to the main tab. Less clicks as you like
 - Added option "Use as background in parent container" (for use inside a div or full-width section)
+- Added fetchpriority attribute
+- Added decoding attribute
 
 ### Div Pro ###
 
