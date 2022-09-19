@@ -96,7 +96,23 @@ class SimpleImage extends \Breakdance\Elements\Element
       "Spacing",
       "spacing",
        ['type' => 'popout']
-     )];
+     ), c(
+        "new_section",
+        "New Section",
+        [c(
+        "height",
+        "Height",
+        [],
+        ['type' => 'unit', 'layout' => 'inline'],
+        true,
+        false,
+        [],
+      )],
+        ['type' => 'section'],
+        false,
+        false,
+        [],
+      )];
     }
 
     static function contentControls()
@@ -125,7 +141,7 @@ class SimpleImage extends \Breakdance\Elements\Element
         "Width",
         [],
         ['type' => 'unit', 'layout' => 'inline'],
-        false,
+        true,
         false,
         [],
       ), c(
@@ -133,6 +149,30 @@ class SimpleImage extends \Breakdance\Elements\Element
         "Aspect Ratio",
         [],
         ['type' => 'text', 'layout' => 'inline', 'placeholder' => '4/3'],
+        false,
+        false,
+        [],
+      ), c(
+        "height",
+        "Height",
+        [],
+        ['type' => 'unit', 'layout' => 'inline', 'condition' => ['path' => 'content.content.aspect_ratio', 'operand' => 'is not set', 'value' => '']],
+        true,
+        false,
+        [],
+      ), c(
+        "use_as_bg_in_parent_container",
+        "Use as BG in parent container",
+        [],
+        ['type' => 'toggle', 'layout' => 'inline'],
+        false,
+        false,
+        [],
+      ), c(
+        "lazy_load",
+        "Lazy Load",
+        [],
+        ['type' => 'toggle', 'layout' => 'inline'],
         false,
         false,
         [],
@@ -157,14 +197,6 @@ class SimpleImage extends \Breakdance\Elements\Element
         [],
       )],
         ['type' => 'section', 'layout' => 'vertical', 'sectionOptions' => ['type' => 'popout']],
-        false,
-        false,
-        [],
-      ), c(
-        "lazy_load",
-        "Lazy Load",
-        [],
-        ['type' => 'toggle', 'layout' => 'inline'],
         false,
         false,
         [],
@@ -243,7 +275,7 @@ class SimpleImage extends \Breakdance\Elements\Element
 
     static function propertyPathsToWhitelistInFlatProps()
     {
-        return false;
+        return ['content.content.width'];
     }
 
     static function propertyPathsToSsrElementWhenValueChanges()

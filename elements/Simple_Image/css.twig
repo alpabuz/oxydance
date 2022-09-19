@@ -1,11 +1,19 @@
-%%SELECTOR%% {
-  width: {{ content.content.width.style }};
+%%SELECTOR%% .breakdance-image-object {
   {{ macros.spacing_margin_y(design.spacing) }}
   {{ macros.borders(design.borders) }}
 }
 
-{% if content.content.aspect_ratio %}
 %%SELECTOR%% .breakdance-image-object {
-  aspect-ratio: {{ content.content.aspect_ratio }}
-}
+{% if content.content.use_as_bg_in_parent_container %}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+{% else %}
+  width: {{ content.content.width.style }};
+  height: {{ content.content.height.style }};
+  aspect-ratio: {{ content.content.aspect_ratio }};
 {% endif %}
+}
