@@ -1,0 +1,52 @@
+{% macro OxydanceElements_ImagePro(img, chosenSize, alt, lazyLoad, fetchPriority, decoding, imgClass) %}
+  {% set defaultSize = 'full' %}
+  {% set allSizes = img.sizes %}
+  {% set size = chosenSize|default(defaultSize) %}
+
+  {% set customAlt = alt|default(img.alt) %}
+
+  {% if alt is same as(false) %}
+    {% set customAlt = false %}
+  {% endif %}
+  
+  {% if fetchPriority %}
+  	{% set fetch = 'fetchpriority="' ~ fetchPriority ~ '"' %}
+  {% endif %}
+  
+  {% if decoding %}
+  	{% set dec = 'decoding="' ~ decoding ~ '"' %}
+  {% endif %}
+
+  {% set altAttr = customAlt ? 'alt="' ~ customAlt ~ '"' %}
+
+  {% set extraImageClass = imgClass ? ' ' ~ imgClass %}
+
+  {# Default to 'full' size in case the chosen size doesn't exist. #}
+  {% set full = allSizes[defaultSize] %}
+  {% set selected = allSizes[size]|default(full) ?: getImagePlaceholder() %}
+
+  {% if img.type == 'external_image' %}
+    <img
+      class="breakdance-image-object{{ extraImageClass  }}"
+      src="{{ img.url }}"
+      {{ altAttr }}
+      {{ lazyLoad ? 'loading="lazy"' }}
+      {{ fetch }}
+      {{ dec }}
+    />
+  {% else %}
+    <img
+      class="breakdance-image-object{{ extraImageClass  }}"
+      src="{{ selected.url }}"
+      width="{{ selected.width }}"
+      height="{{ selected.height }}"
+      {{ altAttr }}
+      {{ lazyLoad ? 'loading="lazy"' }}
+      {{ fetch }}
+      {{ dec }}
+      {% for attribute, value in img.attributes %}
+        {{ attribute }}="{{ value }}"
+      {% endfor %}
+    >
+  {% endif %}
+{% endmacro %}

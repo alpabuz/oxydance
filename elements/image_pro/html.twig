@@ -2,6 +2,8 @@
 {% set size = c.size %}
 {% set img = c.image %}
 {% set lazyLoad = c.lazy_load %}
+{% set fetchpriority = c.fetchpriority %}
+{% set decoding = c.decoding %}
 {% if c.alt.alt == 'disable' %}
  {% set alt = false %}
 {% elseif c.alt.alt == 'custom' %}
@@ -10,4 +12,4 @@
   {% set alt = img.alt %}
 {% endif %}
 
-{{ macros.image(img, size, alt, lazyLoad) }}
+{{ macros.OxydanceElements_ImagePro(img, size, alt, lazyLoad, fetchpriority, decoding) }}
