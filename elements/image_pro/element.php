@@ -96,23 +96,7 @@ class ImagePro extends \Breakdance\Elements\Element
       "Spacing",
       "spacing",
        ['type' => 'popout']
-     ), c(
-        "new_section",
-        "New Section",
-        [c(
-        "height",
-        "Height",
-        [],
-        ['type' => 'unit', 'layout' => 'inline'],
-        true,
-        false,
-        [],
-      )],
-        ['type' => 'section'],
-        false,
-        false,
-        [],
-      )];
+     )];
     }
 
     static function contentControls()
