@@ -24,3 +24,9 @@ You can fork it and modify it however you want.
 ### Next?... ###
 
 Maybe I'll add something else if I have ideas
+
+_______________________________________________________________
+
+#### How to build custom elements? ####
+
+https://breakdance.com/documentation/developers/element-studio/
