@@ -20,3 +20,7 @@ You can fork it and modify it however you want.
 - Full layout control in one section. More control, less clicks
 - Added min-width and height
 - Full control of margin and padding in the Spacing section
+
+### Next?... ###
+
+Maybe I'll add something else if I have ideas
